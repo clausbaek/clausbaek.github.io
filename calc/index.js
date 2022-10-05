@@ -3,6 +3,7 @@ const dateform = document.querySelector(".Select");
 
 const ChristmasDate = new Date(2022, 11, 25);
 const BigHighschoolTest = new Date(2022, 10, 17);
+const GongInJungaeSa = new Date(2022,9,29);
 
 
 let DefaultDate = ChristmasDate;
@@ -22,10 +23,14 @@ setInterval(function () {
     else if (document.querySelector("#The2022수능").value === buttonType) {
       designatedDate = BigHighschoolTest;
     }
-    else {
-      console.log("somehitn wrung");
-    }}
-console.log(designatedDate,"after changedatefunction")
+    else if (document.querySelector("#The2022공인중개사").value === buttonType){
+    designatedDate = GongInJungaeSa;
+  }
+else{
+  console.log("bug!")
+}}
+
+// console.log(designatedDate,"after changedatefunction");
 
     function inputDate(event) {
       event.preventDefault();
@@ -44,8 +49,9 @@ console.log(designatedDate,"after changedatefunction")
 
 
     dateform.querySelector("#The2022ChristmasDate").addEventListener("click", changedate);
-
     dateform.querySelector("#The2022수능").addEventListener("click", changedate);
+    dateform.querySelector("#The2022공인중개사").addEventListener("click", changedate);
+
     dateform.querySelector("button").addEventListener("click", inputDate);
 
 
