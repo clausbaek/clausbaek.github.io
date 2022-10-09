@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage My Firt Chrom App </title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
-  <p>Hello, World!</p>
-  <h1>hit this link </h1>	
-	<a href="/calc">카운트다운계산기</a>
 
-	<!-- <a href="https://naver.com">네이버/a> -->
+    <span>
+        <h2 id="js-clock" class="today"></h2>
+    </span>
 
+    <div id="weather">
+        <span class="Large"></span>
+        <span></span>
+    </div>
+
+    <form class="hidden" id="login-form">
+        <input required maxlength="15" type="text" placeholder="What is your name?" />
+        <input type="submit" value="Log In" />
+    </form>
+    <div id="randomfacts">
+        <h4>Some Random Fact : </h4>
+        <span></span>
+    </div>
+    <div>
+        <span class="hidden" id="greeting"></span>
+        <span class="TodoInput">
+            <form id="todo-form">
+                <input type="text" placeholder="Write a To Do and Press Enter" required />
+                <h2 class="semi-Title"> Your To Do List </h2>
+            </form>
+        </span>
+    </div>
+    <div class="todos">
+        <span id="todo-list"></span>
+    </div>
+
+
+    <script src="js/greetings.js"></script>
+    <script src="js/randomfacts.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
 </body>
+
 </html>
